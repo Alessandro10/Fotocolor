@@ -1,0 +1,26 @@
+{	
+	"e40": 
+		{ "text": "40x",
+		  "carte":["lucido","lux","ypsilon","metal"]
+		},
+	"e45": 
+		{ "text": "45x",
+		  "carte":["lucido","lux","ypsilon","metal"]
+		},
+	"e50": 
+		{ "text": "50x",
+		  "carte":["lucido","lux","ypsilon","metal"]
+		},
+	"e60": 
+		{ "text": "60x",
+		  "carte":["lucido","lux"]
+		},
+	"e70": 
+		{ "text": "70x",
+		  "carte":["lucido","lux"]
+		},
+	"e76": 
+		{ "text": "76x",
+		  "carte":["lucido","lux"]
+		}
+}

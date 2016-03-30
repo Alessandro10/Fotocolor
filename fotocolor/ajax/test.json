@@ -1,0 +1,38 @@
+{	
+	"f40": 
+		{ 
+			"formato": "40",
+			"text": "40x",
+			"carta":["lucido","lux","ypsilon","metal"]
+		},
+	"f45": 
+		{ 
+			"formato": "45",
+			"text": "45x",
+			"carta":["lucido","lux","ypsilon","metal"]
+		},
+	"f50": 
+		{
+			"formato": "50",
+			"text": "50x",
+			"carta":["lucido","lux","ypsilon","metal"]
+		},
+	"f60": 
+		{ 
+			"formato": "60",
+			"text": "60x",
+			"carta":["lucido","lux"]
+		},
+	"f70": 
+		{	
+			"formato": "70",
+			"text": "70x",
+			"carta":["lucido","lux"]
+		},
+	"f76": 
+		{ 
+			"formato": "76",
+			"text": "76x",
+			"carta":["lucido","lux"]
+		}
+}

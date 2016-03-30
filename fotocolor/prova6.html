@@ -1,0 +1,1613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script>
+	<link href="css/fileinput2.css" media="all" rel="stylesheet" type="text/css" />
+	<!--<script src="http://malsup.github.com/jquery.form.js"></script>-->
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="http://malsup.github.com/jquery.form.js"></script> -->
+  <script src="bootstrap-3.3.6-dist/js/bootstrap-slider.js"></script>
+  
+  
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/bootstrap-select.min.js"></script>
+
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.9.3/js/i18n/defaults-*.min.js"></script>
+	<link href="jWindowCrop-master/jWindowCrop.css" media="screen" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="jWindowCrop-master/jquery.jWindowCrop.js"></script>
+	
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.css">
+<script src="//cdn.jsdelivr.net/jquery.ui.rotatable/1.0.1/jquery.ui.rotatable.min.js"></script>
+<script src="js/jquery.ui.rotatable.js"></script>
+<script src="js/fileinput2.min.js" type="text/javascript"></script>
+       <!-- <script src="js/fileinput_locale_fr.js" type="text/javascript"></script>
+        <script src="js/fileinput_locale_es.js" type="text/javascript"></script>-->
+	
+	<style type="text/css">
+	
+	
+		#lavoro{
+			padding-top:100px;
+			
+		
+		}
+	
+		body {
+			font-family:sans-serif;
+			font-size:13px;
+		}
+		#results {
+			font-family:monospace;
+			font-size:20px;
+		}
+		/* over ride defaults */
+		.jwc_frame {
+			border:5px solid black;
+		} .jwc_controls {
+			height:24px;
+		} .jwc_zoom_in, .jwc_zoom_out {
+			display:block; background-color:transparent;
+			cursor:pointer;
+			width:16px; height:16px;
+			float:right; margin:4px 4px 0px 0px;
+			text-decoration:none; text-align:center;
+			font-size:16px; font-weight:bold; color:#000;
+		} .jwc_zoom_in {
+			background-image:url(images/round_plus_16.png);
+		} .jwc_zoom_out {
+			background-image:url(images/round_minus_16.png);
+		} .jwc_zoom_in::after {
+			content:"";
+		} .jwc_zoom_out::after {
+			content:"";
+		}
+		/* over ride defaults */
+
+  
+  .modal {
+position: fixed;
+right: o;
+top: 40px;
+}
+.modal-header,
+.btn-custom {
+	background: #1ABC9C;
+	color: #FFF;
+	/* margin-right: 10px; */
+}
+.modal-body {
+	background: #73BFC1;
+}
+.popover   {
+	background-color: #e74c3c;
+	color: #ecf0f1;
+	width: 120px;
+}
+.popover.right .arrow:after {
+	border-right-color: #e74c3c;
+}
+.input-group[class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+  
+  
+  .tipologia_formato
+  {
+	font-size:22px;
+	
+	top:140px;
+	-ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+  }
+  
+  div.box
+{
+   overflow-y:scroll; 
+   }
+  
+  
+   .thumb {
+    height: 70px;
+    border: 1px solid #000;
+    margin: 10px 5px 0 0;
+  }
+  
+  #formato{
+	height: auto;
+  }
+  
+  [name="testo"]{
+	color: #ffffff;
+	 text-shadow: 2px 2px #000000;
+	letter-spacing: 3px;
+	font-size:19px;
+  }
+  
+  #resizable { position:relative; width: 150px; height: 150px; padding: 0.5em; margin-top:100px:}
+  #resizable i {position:relative; text-align: center; margin: 0;}
+  #foto{ background-color:#ff0000; height:150px;}
+  #lavoro{background-color:rgba(160, 160, 160, 0.55);  height: 75.8vh;}
+  #risorse{ background-color:#00ff00; height:150px;}
+  #info{background-color:/*#1561AD;*/ rgb(203, 203, 203); height:100%;height:75.8vh;
+    }
+	#fotocorrente{ padding:0px; }
+	#spazio{height:10%;}
+	
+	#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+html { overflow-y: hidden;
+	overflow-x: hidden;
+ }
+  
+  #tavolata
+  {
+	height:stretch;
+	bottom:0px;
+  }
+  
+  <!--CSS sliderbar-->
+
+  .tooltip1 {
+    position: relative;
+    z-index: 1020;
+    <!--display: block;-->
+    padding: 5px;
+    font-size: 11px;
+    visibility: visible;
+    margin-top: -2px;
+    bottom:-140%;
+    margin-left: -1em;
+}
+
+
+
+.tooltip-inner1 {
+	background-color:#ffffff;
+    max-width: 200px;
+    padding: 3px 8px;
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+.ui-slider {
+    background: white repeat-x bottom left;
+    border-bottom: 1px solid #EBEAE5;
+    height: 15px;
+    margin-top: 4px;
+    padding: 0px;
+}
+
+.ui-slider-handle {
+    background: #ED6B51;
+    border-bottom: 1px solid #a8a79f;
+    border-right: 1px solid #a8a79f;
+    height: 20px;
+    width: 10px;
+    margin: 0;
+    padding: 0px;
+    display: inline-block;
+}
+
+.ui-slider-range {
+    height: 10px;
+    border-bottom: 3px solid red;
+    position: relative;
+}
+
+.ui-slider-handle {
+    background: <!--#ED6B51-->#ffffff !important;
+    border-bottom: 1px solid #a8a79f !important;
+    border-right: 1px solid #a8a79f !important;
+    height: 20px !important;
+    width: 47px !important;
+    margin: 0 !important;
+    padding: 0px !important;
+    display: inline-block !important;
+    top: -4px !important;
+}
+
+  
+	#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+  //-------------------
+  
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+  
+  </style>
+  
+  
+  
+  	<script type="text/javascript">
+	
+	
+	function zooming()
+	{
+		alert("zoom");
+	}
+	
+	
+	var valore_ottimo = 0;
+		
+	function proporziona(src , nome)
+	{
+		//alert("proporziona");
+		$(".jwc_frame").remove();
+		$("#croppable").append('<img id="target3" class="crop_me" alt="" src="' + src + '" name="' + nome + '" ondrop="drop(event)" ondragover="allowDrop(event)" onmousedown="opacita()" onmouseup="ricompari()" style="visibility:hidden;"/>');
+		$("#target3").one("load",function(){
+		var width_t = parseInt($("#target3").css("width"));
+		var height_t = parseInt($("#target3").css("height"));
+		var altezza_px = altezza/0.231;
+		var lunghezza_px = (altezza_px*width_t)/height_t;//conversione
+		var setta_barra = parseInt(lunghezza_px*0.231);
+		if(setta_barra>=90)
+		{
+			valore_ottimo = setta_barra;
+			settaBarra(setta_barra);
+			
+		}
+		else{
+			settaBarra(90);
+		}
+		
+		$(".jwc_frame").remove();
+		$("#croppable").append('<img id="target3" class="crop_me" alt="" src="' + src + '" name="' + nome + '" ondrop="drop(event)" ondragover="allowDrop(event)" onmousedown="opacita()" onmouseup="ricompari()" />');
+		altezza = $( "#altezza option:selected" ).attr("formato");
+		lunghezza = $(".tooltip-inner1").html();
+		
+		width_window = $(window).width();
+		//1935:400=width_window:x;
+		x = width_window*400/1949;
+		rapporto = x/73.5;
+		if(lunghezza < 160)
+		{
+			width +=11
+		}
+		if(lunghezza >= 160 && lunghezza < 200)
+		{
+			width +=7
+		}
+		//width +=10;
+		//alert("width = " + width);
+		WindowCrop2(width , height , 0);
+		data = $("#target3").attr("src");
+		nome = $("#target3").attr("name");
+		resize(data , nome , 0);
+			/*$('.crop_me').jWindowCrop({
+				targetWidth: width,
+				targetHeight: height,
+				loadingText: 'Attendere prego...',
+				onChange: function(result) {
+					$('#crop_x').text(result.cropX);
+					$('#crop_y').text(result.cropY);
+					$('#crop_w').text(result.cropW);
+					$('#crop_h').text(result.cropH);
+				}
+			});*/
+		});
+		/*$('#target3').bind('mousewheel', function(e){
+				$('#target3').draggable();
+				$('#target3').attr("draggable" , "yes");
+				var evt = window.event || e //equalize event object     
+				evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+				var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+				if(delta > 0) {
+				width = $('#target3').width();
+				width = width + 30
+				$('#target3').css('width' , width);
+				//scroll up
+				}
+				else{
+				width = $('#target3').width();
+				if(width > 150){
+					width = width - 30
+				}
+				$('#target3').css('width' , width);
+				//scroll down
+			}   
+			});*/
+	}
+
+
+	function opacita()
+	{
+		//$("#target3").mousedown(function(){
+		$(".jwc_frame").css("overflow" , "visible");
+		$("#target3").css("opacity" , "0.5");
+		//})
+	}
+	
+	function ricompari()
+	{
+		//$("#target3").mouseup(function(){
+		$(".jwc_frame").css("overflow" , "hidden");
+		$("#target3").css("opacity" , "1");
+		//})
+	}
+	
+		var vera_lunghezza = 0;
+	
+	
+	function WindowCrop2(width , height , option)
+	{
+		$('.crop_me').jWindowCrop({
+				targetWidth: width,
+				targetHeight: height,
+				loadingText: '',
+				onChange: function(result) {
+					$('#crop_x').text(result.cropX);
+					$('#crop_y').text(result.cropY);
+					$('#crop_w').text(result.cropW);
+					$('#crop_h').text(result.cropH);
+					//$('#target3').unbind('draggable');	
+					//$('#target3').attr("draggable" , "no");
+					if(option == 1)
+					{
+						$('#target3').unbind('mousewheel');	
+						$('#target3').bind('mousewheel', function(e){
+							if(!$("#target3").is(".ui-draggable") )
+							{
+								$('#target3').draggable();
+							}
+							$('#target3').attr("draggable" , "yes");
+							var evt = window.event || e //equalize event object     
+							evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+							var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+							valore = $("#operazioni0").attr("disabled");
+							//alert(valore);
+							if(delta > 0) {
+
+							if(valore == "disabled")
+							{
+								width = $('#target3').width();
+								width = width + 10
+								$('#target3').css('width' , width);
+							}
+							else
+							{
+								angolo = getRotationDegrees($("#target3"))
+								angolo = angolo + 1
+								$("#target3").css("transform" , "rotate("+angolo+"deg)");
+								//$("#angolazione").html(angolo);
+								$("#angolazione").val(angolo);
+							}
+								//scroll up
+							}
+							else{
+								if(valore == "disabled")
+								{
+									width = $('#target3').width();
+									if(width > 150){
+										width = width - 10
+									}
+									$('#target3').css('width' , width);
+								}
+								else
+								{
+									angolo = getRotationDegrees($("#target3"))
+									angolo = angolo - 1
+									$("#target3").css("transform" , "rotate("+angolo+"deg)");
+									$("#angolazione").val(angolo);
+									//$("#angolazione").html(angolo);
+								}
+							//scroll down
+							}  
+						
+						});
+					}
+				}
+			});
+				
+	}
+	
+	
+	
+	
+	
+	function resize(src , nome ,ridimensiona) //jWindowCrop-master/images/dock.jpg
+	{
+		//alert("resize");
+		$("#target3").removeAttr('draggable');
+		$("#target3").css("transform" , "rotate(0deg)");
+		var width_t = parseInt($("#target3").css("width"));
+		var height_t = parseInt($("#target3").css("height"));
+		var altezza_px = altezza/0.231;
+		var lunghezza_px = (altezza_px*width_t)/height_t;//conversione
+		var setta_barra = parseInt(lunghezza_px*0.231);
+		valore_ottimo = setta_barra;
+		
+		isDraggable = $("#target3").is(".ui-draggable") ;
+		if(isDraggable)
+		{
+			$("#target3").draggable('destroy');
+		}
+		width_window = $(window).width();
+		//1935:400=width_window:x;
+		x = width_window*400/1949;
+		rapporto = x/73.5;
+		altezza = $( "#altezza option:selected" ).attr("formato");
+		lunghezza = $(".tooltip-inner1").html();
+		//alert(altezza + " - " + lunghezza)
+		//alert(data);
+		height = altezza*rapporto;
+		//width = lunghezza*4.31
+		width = lunghezza*rapporto;
+		//width +=10;
+		if(lunghezza < 160)
+		{
+			width +=11
+		}
+		if(lunghezza >= 160 && lunghezza < 200)
+		{
+			width +=7
+		}
+		$(".tipologia_formato").html(altezza + "cm");
+		altezza = parseInt(altezza);
+		if(altezza == 40)
+		{
+			valore = 140;
+		}
+		else
+		{
+			valore = altezza*3.1;
+		}
+		$(".tipologia_formato").css("top" , valore);
+		$("#b").html(lunghezza);
+		$("#h").html(altezza);
+		$("#formato_scelta").val(lunghezza + "X" + altezza );
+		$("#carta_scelta").val($("#tipo_di_carta option:selected").val());
+		//$("#carta_scelta").val($("#carta option:selected").id);
+		//$("#croppable")
+		current_src = $("#target3").attr("src");
+		if(current_src == src)// && ridimensiona == 0)
+		{
+			//alert("uguali");
+			$("#croppable").append($("#target3"));
+			$(".jwc_frame").remove();
+		}
+		else
+		{
+			//$(".jwc_frame").remove();
+			//$("#croppable").append('<img id="target3" class="crop_me" alt="" src="' + src + '" name="' + nome + '" ondrop="drop(event)" ondragover="allowDrop(event)" />');
+			//alert("proporziona");
+			//alert("diversi");
+			proporziona(src,nome);
+		}
+		$("#target3").css("visibility","visible");
+		WindowCrop2(width , height , 1);
+		/*$('.crop_me').jWindowCrop({
+				targetWidth: width,
+				targetHeight: height,
+				loadingText: 'Attendere prego...',
+				onChange: function(result) {
+					$('#crop_x').text(result.cropX);
+					$('#crop_y').text(result.cropY);
+					$('#crop_w').text(result.cropW);
+					$('#crop_h').text(result.cropH);
+				$('#target3').unbind('mousewheel');	
+				$('#target3').bind('mousewheel', function(e){
+				$('#target3').draggable();
+				$('#target3').attr("draggable" , "yes");
+				var evt = window.event || e //equalize event object     
+				evt = evt.originalEvent ? evt.originalEvent : evt; //convert to originalEvent if possible               
+				var delta = evt.detail ? evt.detail*(-40) : evt.wheelDelta //check for detail first, because it is used by Opera and FF
+
+				valore = $("#operazioni0").attr("disabled");
+				//alert(valore);
+				if(delta > 0) {
+				
+				if(valore == "disabled")
+				{
+					width = $('#target3').width();
+					width = width + 10
+					$('#target3').css('width' , width);
+				}
+				else
+				{
+					angolo = getRotationDegrees($("#target3"))
+					angolo = angolo + 1
+					$("#target3").css("transform" , "rotate("+angolo+"deg)");
+					$("#angolazione").html(angolo);
+				}
+				//scroll up
+				}
+				else{
+				if(valore == "disabled")
+				{
+					width = $('#target3').width();
+					if(width > 150){
+						width = width - 10
+					}
+					$('#target3').css('width' , width);
+				}
+				else
+				{
+					angolo = getRotationDegrees($("#target3"))
+					angolo = angolo - 1
+					$("#target3").css("transform" , "rotate("+angolo+"deg)");
+					$("#angolazione").html(angolo);
+				}
+							//scroll down
+			}   
+			});
+				}
+			});*/
+			
+	}
+
+	
+	
+
+
+//SliderBar
+
+function settaBarra(value)
+{
+	var tooltip = '<div class="tooltip1"><div class="tooltip-inner1">' + value + '</div></div>';
+	$('#slider-range').slider('value', value , true);
+	$('.ui-slider-handle').html(tooltip);
+
+	for(i=0;i<=250;i++)
+	{
+		$(".tooltip-inner1").css("background-color","white");
+		$(".tooltip-inner1").css("color","black");
+	}
+	
+	if(value > 90)
+	{
+		$(".tooltip-inner1").css("background-color","green");
+		$(".tooltip-inner1").css("color","white");
+	}
+	
+}
+
+
+$("#slider-range").ready(function(){
+  
+  var initialValue = 90;
+  
+
+var sliderTooltip = function(event, ui) {
+    var curValue = ui.value || initialValue;
+    var tooltip = '<div class="tooltip1"><div class="tooltip-inner1">' + curValue + '</div></div>';
+
+	if(curValue >= 90)
+		$('.ui-slider-handle').html(tooltip);
+	else
+		 return false;
+	if(curValue == valore_ottimo)
+	{
+		$(".tooltip-inner1").css("background-color","green");
+		$(".tooltip-inner1").css("color","white");
+	
+
+		//setta valore 
+		/*$('#slider-range').slider('value', 180, true);
+		$('#slider-range').slider('refresh');*/
+
+	}
+	
+	//alert($("#target3").attr("src"));
+	data = $("#target3").attr("src");
+	current_width = $(".jwc_frame").css("width");
+	//$("#resizable").css("width",curValue+260);
+	nome = $("#target3").attr("name");
+	resize(data , nome , 0);
+	}
+
+	
+	
+$("#slider-range").slider({
+    value: initialValue,
+    min: 0,
+    max: 250,
+    step: 1,
+	//values: [90 , 110],
+    create: sliderTooltip,
+    slide: sliderTooltip
+});
+$("#slider-range").slider( "option", "disabled", true );
+  });
+  
+
+//SliderBar
+
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+var globa = 0;
+
+function drag(ev) {
+	//alert(ev.target.id);
+    ev.dataTransfer.setData("src", ev.target.src);
+	ev.dataTransfer.setData("title", ev.target.title);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("src");
+	var title =  ev.dataTransfer.getData("title");
+	//alert(title);
+	//nome = $("#target3").attr("name");
+	//alert(title);
+	$("#ordinazione").removeAttr("disabled");
+	$("#slider-range").slider( "option", "disabled", false );
+	var url =$('[blob="' + data + '"]').attr("url");
+	resize(url , title , 0);
+    ev.target.appendChild(document.getElementById(data));
+}
+
+var GlobalWidth=0;
+var GlobalHeight=0;
+$(function() {
+
+
+
+
+
+	$('.selectpicker').selectpicker({
+		style: 'btn-info',
+		size: 4
+	});
+
+
+	/*$( "#resizable" ).resizable();
+	$( "#resizable" ).resizable({
+		animate: true
+	});
+	$("#resizable").resizable(
+	{
+		maxHeight: 300,
+		minHeight: 80,
+		maxWidth: 500,
+		minWidth: 300,
+		stop: function(event, ui) {
+			var width = ui.size.width;
+			var height = ui.size.height;
+			//alert(width + " - " + height);
+			},
+		create : function(event,ui) {alert("create");},
+		start : function(event,ui) {},
+		resize : function(event,ui) 
+		{
+			var width = ui.size.width;
+			var height = ui.size.height;
+			$("#dati").text(height + "X" + width);
+			GlobalWidth= width;
+			GlobalHeight= height;
+		}
+	});*/
+
+	/*$(document).mousedown(function(e)
+	{
+		$(document).mousemove(function(e)
+		{
+			var x = e.pageX + 'px';
+			var y = e.pageY + 'px';
+			$(".dimensioni2").attr("class","dimensioni");
+			var div = $('<div class="dimensioni2">').css({
+				"position": "absolute",                    
+				"left": x,
+				"top": y
+			});
+			div.text(GlobalHeight + " - " + GlobalWidth);
+			$(document.body).append(div);
+			setTimeout(rimuovi, 200);
+		});
+	});
+
+	function rimuovi()
+	{
+		$(".dimensioni").remove();
+	}
+
+	$(document).mouseup(function(e){
+		$(".dimensioni2").remove();
+		$(document).unbind('mousemove')
+	});*/
+});
+
+function doppioclick(blob)
+{
+	var url = $('[blob="' + blob + '"]').attr("url");
+	var name = $('[blob="' + blob + '"]').attr("name");
+	$("#ordinazione").removeAttr("disabled")
+	$("#slider-range").slider( "option", "disabled", false );
+	//alert(name);
+	resize(url,name , 0);
+}
+
+function getRotationDegrees(obj) {
+    var matrix = obj.css("-webkit-transform") ||
+    obj.css("-moz-transform")    ||
+    obj.css("-ms-transform")     ||
+    obj.css("-o-transform")      ||
+    obj.css("transform");
+    if(matrix !== 'none') {
+        var values = matrix.split('(')[1].split(')')[0].split(',');
+        var a = values[0];
+        var b = values[1];
+        var angle = Math.round(Math.atan2(b, a) * (180/Math.PI));
+    } else { var angle = 0; }
+    return (angle < 0) ? angle + 360 : angle;
+}
+
+
+function rotatedSize(angle_in_degrees , width , height){
+
+var angle = angle_in_degrees * Math.PI / 180,
+    sin   = Math.sin(angle),
+    cos   = Math.cos(angle);
+
+// (0,0) stays as (0, 0)
+
+// (w,0) rotation
+var x1 = cos * width,
+    y1 = sin * width;
+
+// (0,h) rotation
+var x2 = -sin * height,
+    y2 = cos * height;
+
+// (w,h) rotation
+var x3 = cos * width - sin * height,
+    y3 = sin * width + cos * height;
+
+var minX = Math.min(0, x1, x2, x3),
+    maxX = Math.max(0, x1, x2, x3),
+    minY = Math.min(0, y1, y2, y3),
+    maxY = Math.max(0, y1, y2, y3);
+
+var rotatedWidth  = maxX - minX,
+    rotatedHeight = maxY - minY;
+var array = {width: rotatedWidth , height: rotatedHeight};
+//alert(array['width']);
+return array;
+
+}
+
+		function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  var numero = $("#angolazione").val();
+  numero = numero + key;
+  var integernumber = parseInt(numero);
+  if( !regex.test(key) || integernumber > 359 ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+
+function metti_tipi_carta()
+{
+	 formato = $("#altezza option:selected").attr("formato");
+	 //alert("formato");
+	 $.getJSON( "ajax/test.json", function( data ) {
+  //alert("ddfdf");
+  //formato json
+      $('#tipo_di_carta')
+    .find('option')
+    .remove()
+    .end()
+	//alert("ddfdf");
+
+	//alert(data)
+  $.each( data, function( key, val ) {
+		//alert(val.carta[i])
+		//alert(val.formato + " - " + formato);
+		if(val.formato == formato)
+		{
+			//alert("entrato");
+			for (i = 0 ; i<val.carta.length;i++)
+			{
+				//alert(val.carta[i]);
+				$('#tipo_di_carta')
+				.append($("<option></option>")
+				.attr("formato",key)
+				.text(val.carta[i])); 
+				$('#tipo_di_carta').selectpicker('refresh');
+			}
+		}
+	});
+});
+}
+
+$(document).ready(function(){
+
+$.getJSON( "ajax/test.json", function( data ) {
+  //alert("ddfdf");
+  var items = [];
+  //formato json
+      $('#altezza')
+    .find('option')
+    .remove()
+    .end()
+
+	//alert(data)
+  $.each( data, function( key, val ) {
+
+	//alert("<option formato='" + key + "'>" + val.text + "</option>");
+	 $('#altezza')
+         .append($("<option></option>")
+         .attr("formato",val.formato)
+         .text(val.text)); 
+     $('#altezza').selectpicker('refresh');
+	 
+	/* for (i = 0 ; i<val.carta.length;i++)
+	 {
+		//alert(val.carta[i])
+		 $('#tipo_di_carta')
+			 .append($("<option></option>")
+			 //.attr("formato",key)
+			 .text(val.carta[i])); 
+		 $('#tipo_di_carta').selectpicker('refresh');
+	}*/
+	//$("#altezza").append("<option id='" + key + "'>" + val + "</option>");
+    //items.push( "<option id='" + key + "'>" + val + "</option>" );
+  });
+  metti_tipi_carta();
+  //alert("ff");
+ //alert(items);
+
+});
+
+
+
+		$("#input-dim-1").click(function(){
+		$(".file-drop-zone").css("overflow-y" , "auto");
+		$(".file-drop-zone").css("height" , "250px");
+		//style="overflow-y:auto;height:200px;"
+		});
+
+		$(window).resize(function()
+		{
+			data = $("#target3").attr("src");
+			nome = $("#target3").attr("name");
+			resize(data , nome , 1);
+			
+		});
+
+
+		$('.crop_me').change(function()
+		{
+			alert("ciao");
+			
+		})
+	
+		//widthWindow = $(document).width();
+		//1935:400 = widthWindow:x
+		//vera_lunghezza = (400*widthWindow)/1935
+		//WindowCrop2(vera_lunghezza , 200 , 0);
+		/*$('.crop_me').jWindowCrop({
+			targetWidth: vera_lunghezza,
+			targetHeight: 200,
+			loadingText: 'Attendere prego...',
+			onChange: function(result) {
+				$('#crop_x').text(result.cropX);
+				$('#crop_y').text(result.cropY);
+				$('#crop_w').text(result.cropW);
+				$('#crop_h').text(result.cropH);
+			}
+			});*/
+
+
+	//alert($(document).width());
+	
+	$("[name='operazioni']").click(function()
+	{
+		num = $(this).attr("id")[10];
+		num = parseInt(num);
+		$(this).attr("disabled","true");
+		num = 1 - num
+		$("#operazioni" + num).removeAttr("disabled");
+	});
+
+
+	//inserisci righello
+	/*var i;
+	for(i=0;i<=250;i++){ 
+			if(i%10)
+			{
+				$("#adding").append('<div style="display:inline;font-size:16.2px;">|</div>');
+			}	
+			else
+			{
+				
+				if(i == 0 || i == 90 || i == 250)
+				{
+					$("#adding").append('<div style="display:inline;font-size:22px;color:red;">|</div>');
+				}
+				else
+				{
+					$("#adding").append('<div style="display:inline;font-size:22px;">|</div>');
+				}
+			}
+		}
+		$("#adding").append('<div style="display:block;font-size:16.2px;">0</div>');
+	for(i=0;i<=250;i++){ 
+			if(i%10)
+			{
+				$("#adding").append('<div style="display:inline;font-size:16.2px;visibility:hidden">|</div>');
+			}	
+			else
+			{
+				if(i == 90 || i == 250)
+				{
+					$("#adding").append('<div style="display:inline;font-size:22px;">'+ i +'</div>');
+				}
+				else
+				{
+					$("#adding").append('<div style="display:inline;font-size:18px;visibility:hidden">|</div>');
+				}
+			}
+		}*/
+
+		
+	//fine righello
+	$("#ordinazione").click(function()
+	{
+		$("#carta_scelta").val($("#tipo_di_carta option:selected").val());
+		
+	});
+
+	$("#decrementa").click(function(){
+		var valore = $("#quantita").val();
+		valore ++;
+		$("#quantita").val(valore);
+	});
+	
+	$("#incrementa").click(function(){
+		var valore = $("#quantita").val();
+		if(valore != 1)
+		{
+			valore --;
+		}
+		$("#quantita").val(valore);
+	});
+	
+	$("#decrementa2").click(function(){
+		var valore = $("#angolazione").val();
+		if(valore != 359)
+		{
+			valore ++;
+		}
+		else
+		{
+			valore = 0;
+		}
+		$("#angolazione").val(valore);
+		$("#target3").css("transform" , "rotate("+$("#angolazione").val()+"deg)");
+	});
+	
+	$("#incrementa2").click(function(){
+		var valore = $("#angolazione").val();
+		if(valore != 0)
+		{
+			valore --;
+		}
+		else
+		{
+			valore = 359;
+		}
+		$("#angolazione").val(valore);
+		$("#target3").css("transform" , "rotate("+$("#angolazione").val()+"deg)");
+	});
+	
+
+	$(".fine").click(function(){
+		source = $("#target3").attr("src");
+		name2 = $("#target3").attr("name");
+		//left2 = parseInt($('#crop_x').text());
+		//top2 = parseInt($('#crop_y').text());
+		//width2 = parseInt($('#crop_w').text());
+		//height2 = parseInt($('#crop_h').text());
+	    left2 = parseInt($("#target3").position().left);
+		top2 = parseInt($("#target3").position().top);
+		
+		base_riquadro2 = parseInt($(".jwc_frame").width());
+		altezza_riquadro2 = parseInt($(".jwc_frame").height());
+		
+		width2 = $("#target3").width();
+
+		height2 = $("#target3").height();
+		//height2 = height2 + top2;
+		//width2 = width2 + left2;
+		tipo_carta2 = $("#tipo_di_carta option:selected").val();
+		
+		altezza2 = parseInt($("#h").html());
+		base2 = parseInt($("#b").html());
+		quantita2 = $("#quantita").val();
+		//width = $("#target3").attr("src");
+		//height = $("#target3").attr("src");
+		nome_cliente2 = $("#nome_cliente").val();
+		cognome_cliente2 = $("#cognome_cliente").val();
+		indirizzo_cliente2 = $("#indirizzo_cliente").val();
+		telefono_cliente2 = $("#telefono_cliente").val();
+		nota_cliente2 = $("#nota_cliente").val();
+		//altezza_riquadro2 = $(".jwc_frame").height();
+		//base_riquadro2 = $(".jwc_frame").width();
+		angolo2 = getRotationDegrees($("#target3"))
+		$("#target3").css("transform" , "rotate(0deg)");
+		//left2 = parseInt($("#target3").position().left);
+		//top2 = parseInt($("#target3").position().top); 
+		$("#target3").css("transform" , "rotate("+angolo2+"deg)");
+		if(angolo2 != 0)
+		{
+			var array = rotatedSize(angolo2 , width2 , height2);
+			width2 = parseInt(array['width']);
+			height2 = parseInt(array['height']);
+		}
+		//alert(width2);
+		//alert(height2);
+		//$("#target3").css("transform" , "rotate(0deg)");
+		$("#loading").removeAttr("class");
+		$.ajax({
+			url: "/cgi-bin3/p.py",
+			type: "POST",
+			data: {name: name2 ,
+			nome_cliente: nome_cliente2 ,
+			cognome_cliente: cognome_cliente2 ,
+			indirizzo_cliente: indirizzo_cliente2 ,
+			telefono_cliente: telefono_cliente2 ,
+			nota_cliente: nota_cliente2 ,
+			quantita: quantita2 ,
+			tipo_carta: tipo_carta2 ,
+			base: base2 ,
+			altezza: altezza2 ,
+			top: top2 ,
+			left: left2 ,
+			width: width2 ,
+			height: height2 ,
+			base_riquadro: base_riquadro2 , 
+			altezza_riquadro: altezza_riquadro2 ,
+			angolo: angolo2, 
+			src: source},
+			//processData: false,
+			//contentType: false,
+			//cache: false,
+			success: function(response){
+			
+				$("#loading").attr("class" , "hidden");
+				$("#send_btn2").click();
+				alert("Inviato con successo!");
+				//alert(response);
+				//$("#py").html(response);
+			},
+			error: function (xhr, ajaxOptions, thrownError) {
+				$("#loading").attr("class" , "hidden");
+				alert("Errore status: " + xhr.status + " thrownError: " + thrownError + " ajaxOptions: " + ajaxOptions)
+				//alert(xhr.status);
+				//alert(thrownError);
+				//alert(ajaxOptions);
+			}
+		});	
+		
+	/*$("form[name='uploader']").submit(function(e) {
+        var formData = new FormData($(this)[0]);
+
+        $.ajax({
+            url: "page.php",
+            type: "POST",
+            data: formData,
+            async: false,
+            success: function (msg) {
+                alert(msg)
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+
+        e.preventDefault();
+    });*/	
+
+	
+		});
+	
+
+ $("#angolazione").on("change paste keyup", function() {
+	//alert("few");
+   $("#target3").css("transform" , "rotate("+$("#angolazione").val()+"deg)");
+});
+
+$("#altezza").change(function()
+{
+	metti_tipi_carta();
+	//alert("cambio");
+	//alert("ciao");
+	$("#target3").css("visibility" , "hidden");
+	//alert("ciao");
+	data = $("#target3").attr("src");
+	nome = $("#target3").attr("name");
+	
+	//resize(data , nome , 0);
+	proporziona(data,nome);
+	resize(data , nome , 0);
+	$("#target3").css("visibility" , "visible");
+})
+
+
+function handleFileSelect(evt) 
+{
+	var files = evt.target.files; // FileList object
+	$('.thumb').remove();
+	// Loop through the FileList and render image files as thumbnails.
+	
+	for (var i = 0, f; f = files[i]; i++) {
+		
+		// Only process image files.
+		if (!f.type.match('image.*')) {
+			continue;
+		}
+
+		// prova AJAX
+			//jQuery.noConflict();    
+			formdata = new FormData("img" , f);      
+			
+			
+			$.ajax({
+                url: '/cgi-bin3/reduce.py',
+                type: 'POST',
+                data: formdata,
+                async: false,
+                success: function(data) {
+                    alert(data);
+                },
+                cache: false,
+                contentType: false,
+                processData: false
+            });
+			
+			
+			//alert(e.target.result);
+			//prova Ajax
+		
+		
+		var reader = new FileReader();
+
+		// Closure to capture the file information.
+		reader.onload = (function(theFile) {
+			return function(e) {
+			// Render thumbnail.
+			
+			var span = document.createElement('span');
+			
+			//$('#foto').append('<output id="list2"></output>');
+			//alert(e.target.result);
+			
+			//console.log("%s", e.target.result);
+			var src = e.target.result;
+			$("#casella").val(src);
+			/*$.ajax({
+            url: "/cgi-bin3/reduce.py",
+            type: "POST",
+            data: {foo: 'Prova', bar: src},
+			//processData: false,
+            //contentType: false,
+			//cache: false,
+            success: function(response){
+					alert("ciao");
+                    $("#div").html(response);
+                }
+			
+			
+       });*/
+			//alert(theFile.size);
+			span.innerHTML = ['<img id="'+ escape(theFile.name) +'"draggable="true" ondragstart="drag(event)" class="thumb" src="', e.target.result,
+			'" title="', escape(theFile.name), '" width="75px"/><span class="nodisplay" style="width:70px;">' + escape(theFile.name) + '</span>'].join('');
+			document.getElementById('list2').insertBefore(span, null);
+			};
+		})(f);
+
+		// Read in the image file as a data URL.
+		reader.readAsDataURL(f);
+	}
+}
+
+	document.getElementById('fileURL').addEventListener('change', handleFileSelect, false);
+
+});
+
+
+function selezionaImg()
+{
+	("div > [title='12.JPG']").css("color" , "grey");
+}
+
+
+</script>
+ 
+  
+
+  
+</head>
+<body>
+
+
+
+
+<!-- MINIMUM IMAGE DIMENSIONS -->
+<input id="input-dim-1" name="inputdim1[]" type="file" multiple class="file-loading" accept="image/*">
+<script>
+$("#input-dim-1").fileinput({
+    uploadUrl: "/file-upload-batch/2",
+	maxFileCount: 14,
+	maxFileSize: 14190.59,
+    allowedFileExtensions: ["jpg", "png", "gif"],
+    minImageWidth: 30,
+    minImageHeight: 50
+});
+</script>
+<!--<div class="container">
+  <h2>Simple Collapsible</h2>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+  <div id="demo" class="collapse in">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>-->
+
+<div class="row" id="tavolata">
+<div  id="info" class="col-md-2 col-xs-2">
+
+<div class="row">
+	<li class="separate"></li>
+</div>
+<div class="row">
+	<div name="testo" class="col-lg-4 col-md-12 col-xs-12" align="center">
+		Formato
+	</div>
+	<select id="altezza" class="selectpicker col-lg-8 col-md-12 col-xs-12">
+	  <option formato="40">40X</option>
+	  <option formato="45">45X</option>
+	  <option formato="50">50X</option>
+	  <option formato="60">60X</option>
+	  <option formato="70">70X</option>
+	  <option formato="76">76X</option>
+	</select>
+</div>
+
+<div class="row">
+	<li class="separate"></li>
+</div>
+
+<div class="row">
+	<div name="testo" class="col-lg-4 col-md-12 col-xs-12" align="center">
+		Carta
+	</div>
+	<select id="tipo_di_carta" class="selectpicker col-lg-8 col-md-12 col-xs-12">
+	  <option>Lucida</option>
+	  <option>Lux</option>
+	  <option>Y</option>
+	  <option>Metal</option>
+	</select>
+</div>
+
+
+<div name="testo" id="formato" class="row" align="center">
+
+Formato <p id="dati"><f id="b">90</f>X<f id="h">90</f></p>
+Angolo 
+
+<!--<p id="angolazione">0</p>-->
+ <div class="col-md-12">
+						<div class="input-group">
+						<span id="incrementa2" class="input-group-btn">
+						<button type="button" class="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner">
+						<span class="glyphicon glyphicon-minus"></span>
+						</button>
+						</span>
+						<input id="angolazione"  onkeypress='validate(event)' type="text" data-ride="spinner" id="spinner" class="form-control input-number" value="0" style="text-align:center">
+						<span id="decrementa2" class="input-group-btn">
+						<button type="button" class="btn btn-default" data-value="increase" data-target="#spinner" data-toggle="spinner">
+						<span class="glyphicon glyphicon-plus"></span>
+						</button>
+						</span>
+						</div>
+                    </div>
+</div>
+<div class="row" style="visibility:gone">
+---
+</div>
+<div class="row">
+<button id="ordinazione" type="button" class="col-md-offset-1 col-md-5 col-xs-12 btn btn-success" data-toggle="modal" data-target="#myModal" disabled>Ordina</button>
+
+<button type="button" class="col-md-5 col-xs-12 btn btn-danger">Annulla</button>
+<div id="invisibletext">
+
+</div>
+</div>
+
+</div>
+<div class="col-md-1 col-xs-1 tipologia_formato">
+		40cm
+	</div>
+<div id="lavoro"  class="col-md-9 col-xs-9">
+<!--<div id="resizable" class="ui-widget-content">
+  <!--<h3 class="ui-widget-header">Resizable</h3>-->
+
+ 	<div id="croppable">
+		<img id="target3" class="crop_me" alt="" src="bianco.jpg" name="null" ondrop="drop(event)" ondragover="allowDrop(event)" onmousedown="opacita()" onmouseup="ricompari()"><!--jWindowCrop-master/images/dock.jpg-->
+	</div>
+	
+	
+	
+	<div id="slider-range" class="col-md-11 col-xs-11" data-slider-tooltip="show" title="Scegli dimensione">
+
+	</div>
+	<div id="righello" class="row">
+		<div class="col-md-12 col-xs-12" id="adding">
+			<div class="col-md-1 col-xs-1" style="display:block;padding-left:0px;">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1">|</div>
+			<div class="col-md-1 col-xs-1" style="display:block;padding-right:0px;right:-5px;">|</div>
+			<div class="col-md-1 col-xs-1" style="display:block;padding-left:0px;left:-3px;">0</div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1"></div>
+			<div class="col-md-1 col-xs-1" style="display:block;padding-left:0px;left:12px;">250</div>
+			
+		</div>
+	</div>
+	<div id="results2" class="col-md-12 col-xs-12">
+		<button id="operazioni0" name="operazioni" type="button" class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-5 btn btn-success" disabled>
+			<span class="glyphicon glyphicon-search">
+			Zoom
+			</button>
+		<button id="operazioni1" name="operazioni" type="button" class="col-md-offset-1 col-md-3 col-xs-offset-1 col-xs-5 btn btn-success">
+			<span class="glyphicon glyphicon-refresh"> 
+			Ruota
+		</button>
+	</div>
+  
+  <div class="container">
+    <!-- Button to trigger modal --> 
+    
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	
+	
+        <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Riepilogo Ordine</h4>
+        </div>
+        <div class="modal-body">
+		<img id="loading" class="hidden" src="loading.gif" />
+		<ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Dati Prodotto</a></li>
+        <li><a href="#tab2" data-toggle="tab">Dati Cliente</a></li>
+        </ul>
+        <div class="tab-content">
+        <div class="tab-pane active" id="tab1">
+		<!--<form class="form-horizontal">-->
+		<div class="form-horizontal">
+        	<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Nome Prodotto</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="tipo_scelta" name="last_name" placeholder="Citta'" disabled value="Gigantografia"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Formato</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="formato_scelta" name="last_name" placeholder="Citta'" disabled value="40X90"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Carta</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="carta_scelta" name="last_name" placeholder="Citta'" disabled value="Lucida"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Quantita</label>
+                    <div class="col-md-6">
+						<div class="input-group">
+						<span id="incrementa" class="input-group-btn">
+						<button type="button" class="btn btn-default" data-value="decrease" data-target="#spinner" data-toggle="spinner">
+						<span class="glyphicon glyphicon-minus"></span>
+						</button>
+						</span>
+						<input id="quantita" type="text" data-ride="spinner" id="spinner" class="form-control input-number" value="1">
+						<span id="decrementa" class="input-group-btn">
+						<button type="button" class="btn btn-default" data-value="increase" data-target="#spinner" data-toggle="spinner">
+						<span class="glyphicon glyphicon-plus"></span>
+						</button>
+						</span>
+						</div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <div class="col-md-12">
+						<div class="row">
+							<button type="submit" value="Submit" class="col-md-offset-3 btn btn-custom col-md-6 fine" id="send_btn">Ordina</button>
+						</div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <div class="col-md-12">
+						<div class="row">
+							<button type="submit" value="Submit" class="col-md-offset-3 btn btn-custom col-md-6 annulla" id="send_btn2" data-dismiss="modal">Annulla</button>
+						</div>
+                    </div>
+                </div>
+				</div>
+				<!--</form>-->
+		
+        </div>
+        <div class="tab-pane" id="tab2">
+			<!--<form class="form-horizontal">-->
+			<div class="form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="first_name">Nome</label>
+                    <div class="col-md-6">
+                    	<input type="text" class="form-control" id="nome_cliente" name="first_name" placeholder="Nome"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Cognome</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="cognome_cliente" name="last_name" placeholder="Cognome"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Indirizzo</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="indirizzo_cliente" name="last_name" placeholder="Indirizzo"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Citta'</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="citta_cliente" name="last_name" placeholder="Citta'"/>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <label class="control-label col-md-4" for="last_name">Telefono</label>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="telefono_cliente" name="last_name" placeholder="Telefono"/>
+                    </div>
+                </div>
+                <!--<div class="form-group">
+                    <label class="control-label col-md-4" for="email">Email Address</label>
+                    <div class="col-md-6 input-group">
+                    <span class="input-group-addon">@</span>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email Address"/>
+                    </div>
+                </div>-->
+                <div class="form-group">
+                    <label class="control-label col-md-4" for="comment">Nota</label>
+                    <div class="col-md-6">
+                        <textarea rows="6" class="form-control" id="nota_cliente" name="comments" placeholder="Nota"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+						<div class="row">
+							<button type="submit" value="Submit" class="col-md-offset-3 btn btn-custom col-md-6 fine" id="send_btn">Ordina</button>
+						</div>
+                    </div>
+                </div>
+				<div class="form-group">
+                    <div class="col-md-12">
+						<div class="row">
+							<button type="submit" value="Submit" class="col-md-offset-3 btn btn-custom col-md-6 annulla" id="send_btn">Annulla</button>
+						</div>
+                    </div>
+                </div>
+				
+            <!--</form>-->
+        </div>
+        </div>
+            
+        </div><!-- End of Modal body -->
+        </div><!-- End of Modal content -->
+        </div><!-- End of Modal dialog -->
+    </div><!-- End of Modal -->
+</div><!-- End of Container -->
+  
+  
+  
+  
+  
+  
+<div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridModalLabel">Ordina</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid bd-example-row">
+		<div class="col-md-6">
+			<div class="raw">
+				<div class="col-md-5">
+				Nome:
+				</div>
+				<input type="text" class="col-md-7">
+			</div>
+		</div>
+		</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--</div>-->
+</div>    
+</body>
+</html>
